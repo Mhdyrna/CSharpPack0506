@@ -16,6 +16,7 @@ namespace CSharpPack0506
             string BirthDate = Console.ReadLine();
 
             DateTime birthDate = DateTime.Parse(BirthDate);
+            bool IsBirthDateValid = true;
             int Age = DateTime.Now.Year - birthDate.Year;
 
             Console.Write("Enter your mobile number: ");
@@ -26,12 +27,11 @@ namespace CSharpPack0506
                 Mobile = "0" + Mobile.Substring(3);
 
             }
-            bool IsValid = Mobile.Length == 11 && Mobile.StartsWith("0");
+            bool IsMobileValid = Mobile.Length == 11 && Mobile.StartsWith("0");
 
 
-            Console.WriteLine("Enter your national code: ");
+            Console.Write("Enter your national code: ");
             string NationalCode = Console.ReadLine();
-
             bool IsNationalCodeValid = Regex.IsMatch(NationalCode, @"^\d{10}$");
 
             Console.Write("Enter your card number: ");
@@ -182,15 +182,50 @@ namespace CSharpPack0506
                 Console.WriteLine("Your card is invalid!");
             }
             Console.WriteLine("\n========== User Information ==========");
-
             Console.WriteLine($"First Name: {FirstName}");
             Console.WriteLine($"Last Name: {LastName}");
+
             Console.WriteLine($"Birth Date: {BirthDate}");
-            Console.WriteLine($"Age: {Age}");
-            Console.WriteLine($"Mobile: {Mobile}");
-            Console.WriteLine($"National Code: {NationalCode}");
-            Console.WriteLine($"Card Number: {Card}");
-            Console.WriteLine($"Bank: {BankName}");
+
+            if (IsBirthDateValid)
+            {
+                Console.WriteLine($"Age: {Age}");
+            }
+            else
+            {
+                Console.WriteLine("Birth Date: Invalid");
+            }
+
+
+            if (IsMobileValid)
+            {
+                Console.WriteLine("Mobile Status: Valid");
+            }
+            else
+            {
+                Console.WriteLine("Mobile Status: Invalid");
+            }
+
+
+            if (IsNationalCodeValid)
+            {
+                Console.WriteLine("National Code Status: Valid");
+            }
+            else
+            {
+                Console.WriteLine("National Code Status: Invalid");
+            }
+
+
+            if (Card.Length == 16)
+            {
+                Console.WriteLine($"Bank: {BankName}");
+            }
+            else
+            {
+                Console.WriteLine("Card Number: Invalid");
+            }
+
 
             Console.WriteLine("======================================");
         }
