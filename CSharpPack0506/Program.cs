@@ -1,4 +1,6 @@
-﻿namespace CSharpPack0506
+﻿using System.Text.RegularExpressions;
+
+namespace CSharpPack0506
 {
     internal class Program
     {
@@ -10,8 +12,11 @@
             Console.Write("Enter your last name: ");
             string LastName = Console.ReadLine();
 
-            Console.Write("Enter Your Birth Date ('dd/mm/year') ");
-            string Date = Console.ReadLine();
+            Console.Write("Enter Your Birth Date ('dd/mm/yyyy') ");
+            string BirthDate = Console.ReadLine();
+
+            DateTime birthDate = DateTime.Parse(BirthDate);
+            int Age = DateTime.Now.Year - birthDate.Year;
 
             Console.Write("Enter your mobile number: ");
             string Mobile = Console.ReadLine();
@@ -21,22 +26,21 @@
                 Mobile = "0" + Mobile.Substring(3);
 
             }
-            if (Mobile.Length == 11 && Mobile.StartsWith("0"))
-            {
-                Console.WriteLine($"Your mobile number is {Mobile}");
-            }
-            else 
-            {
-                Console.WriteLine("Your mobile number is invalid!");
-            }
+            bool IsValid = Mobile.Length == 11 && Mobile.StartsWith("0");
+
+
+            Console.WriteLine("Enter your national code: ");
+            string NationalCode = Console.ReadLine();
+
+            bool IsNationalCodeValid = Regex.IsMatch(NationalCode, @"^\d{10}$");
 
             Console.Write("Enter your card number: ");
             string Card = Console.ReadLine();
-
+            string BankName = "Unknown";
             if (Card.Length == 16)
             {
                 string Prefix = Card.Substring(0, 6);
-                string BankName = "Unknown";
+
                 switch (Prefix)
                 {
                     case "603799":
@@ -177,6 +181,20 @@
             {
                 Console.WriteLine("Your card is invalid!");
             }
+            Console.WriteLine("\n========== User Information ==========");
+
+            Console.WriteLine($"First Name: {FirstName}");
+            Console.WriteLine($"Last Name: {LastName}");
+            Console.WriteLine($"Birth Date: {BirthDate}");
+            Console.WriteLine($"Age: {Age}");
+            Console.WriteLine($"Mobile: {Mobile}");
+            Console.WriteLine($"National Code: {NationalCode}");
+            Console.WriteLine($"Card Number: {Card}");
+            Console.WriteLine($"Bank: {BankName}");
+
+            Console.WriteLine("======================================");
         }
+
     }
+
 }
