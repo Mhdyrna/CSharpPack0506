@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using CSharpPack0506.Models;
+using System.Text.RegularExpressions;
 
 namespace CSharpPack0506
 {
@@ -6,6 +7,33 @@ namespace CSharpPack0506
     {
         static void Main(string[] args)
         {
+
+            //User FirstUser = new User();
+            //FirstUser.FirstName = "Hamid";
+            //FirstUser.LastName = "Rezaei";
+            //FirstUser.Mobile = "09399121270";
+            //FirstUser.CardNumber = "6037697404792381";
+            //FirstUser.BirthDate = DateTime.Now.AddYears(-30);
+            ////Console.WriteLine(FirstUser.FirstName + " "+ FirstUser.LastName + " " + FirstUser.Mobile + " " + FirstUser.CardNumber + " " + FirstUser.BirthDate);
+            //Console.WriteLine(FirstUser.GetInfo());
+
+            DateTime birthDate = DateTime.Now.AddYears(-29);
+            try
+            {
+                Console.WriteLine("Please enter your firstname:");
+                string name = Console.ReadLine();
+                Student SecondUser = new Student(name, "Akbari", "09125556622","00225544",birthDate);
+                Console.WriteLine(SecondUser.GetInfo());
+
+                //User ThirdUser = new User("Karim", "Mohammadi", "09124447741", "2022554477889955");
+                //Console.WriteLine(ThirdUser.GetInfo());
+            }
+            catch(Exception ex)
+            {
+                throw;
+            }
+        
+         
             Console.Write("Enter your first name: ");
             string FirstName = Console.ReadLine();
 
@@ -15,7 +43,7 @@ namespace CSharpPack0506
             Console.Write("Enter Your Birth Date ('dd/mm/yyyy') ");
             string BirthDate = Console.ReadLine();
 
-            DateTime birthDate = DateTime.Parse(BirthDate);
+            //DateTime birthDate = DateTime.Parse(BirthDate);
             bool IsBirthDateValid = true;
             int Age = DateTime.Now.Year - birthDate.Year;
 
