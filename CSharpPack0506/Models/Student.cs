@@ -6,17 +6,17 @@ namespace CSharpPack0506.Models
 {
     internal class Student : User
     {
-        public Student(string firstname, string lastname, string mobile, string nationalcode) : base(firstname, lastname, mobile, nationalcode)
+        public Student(string firstName, string lastName, string mobile, string nationalCode) : base(firstName, lastName, mobile, nationalCode)
         {
-            if (string.IsNullOrEmpty(firstname) || string.IsNullOrEmpty(lastname) || string.IsNullOrEmpty(nationalcode))
+            if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(nationalCode))
             {
                 throw new Exception("Please enter your information correctly!");
             }
 
-            FirstName = firstname;
-            LastName = lastname;
+            FirstName = firstName;
+            LastName = lastName;
             Mobile = mobile;
-            NationalCode = nationalcode;
+            NationalCode = nationalCode;
         }
         public Student(string firstname, string lastname, string mobile, string nationalcode, DateTime birthDate) : this(firstname, lastname, mobile, nationalcode)
         {
@@ -26,6 +26,7 @@ namespace CSharpPack0506.Models
             BirthDate = birthDate;
 
         }
+        public string Relation { get; set; }
 
         public string GetInfo()
         {

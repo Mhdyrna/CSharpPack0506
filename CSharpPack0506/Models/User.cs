@@ -6,17 +6,17 @@ namespace CSharpPack0506.Models
 {
     internal class User
     {
-        public User(string firstname, string lastname, string mobile, string nationalcode)
+        public User(string firstName, string lastName, string mobile, string nationalCode)
         {
-            if (string.IsNullOrEmpty(firstname) || string.IsNullOrEmpty(lastname) || string.IsNullOrEmpty(nationalcode))
+            if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(nationalCode))
             {
                 throw new Exception("Please enter your information correctly!");
             }
 
-            FirstName = firstname;
-            LastName = lastname;
+            FirstName = firstName;
+            LastName = lastName;
             Mobile = mobile;
-            NationalCode = nationalcode;
+            NationalCode = nationalCode;
         }
         public string FirstName { get; set; }
         public string LastName { get; set; }
