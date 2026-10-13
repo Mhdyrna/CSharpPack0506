@@ -29,9 +29,9 @@ namespace MyProject0506.Models
         }
         public decimal Weight { get; set; }
 
-        public string ShowFullName()
+        public override string ShowFullName()
         {
-            return FirstName + " " + LastName + " " + Weight;
+            return FirstName + " " + LastName + " " + Weight+ " " + "is registered as an athlete.";
         }
     }
 }

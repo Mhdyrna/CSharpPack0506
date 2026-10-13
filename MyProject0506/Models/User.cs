@@ -28,9 +28,9 @@ namespace MyProject0506.Models
 
         public DateTime BirthDate { get; set; }
 
-        public string ShowFullName()
+        public virtual string ShowFullName()
         {
-            return FirstName + " " + LastName;
+            return FirstName + " " + LastName + "is registered as an user.";
         }
 
 
