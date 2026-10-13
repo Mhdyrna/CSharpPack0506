@@ -19,19 +19,20 @@ namespace MyProject0506.Models
             Mobile = mobile;
         }
 
-       public Athlete(string firstName, string lastName, string nationalCode, string mobile,DateTime birthDate) : this(firstName,lastName,nationalCode,mobile)
+       public Athlete(string firstName, string lastName, string nationalCode, string mobile,DateTime birthDate,decimal weight) : this(firstName,lastName,nationalCode,mobile)
         {
             if(birthDate==DateTime.MinValue)
             {
                 throw new Exception("Please enter your birthdate!");
             }
             BirthDate = birthDate;
+            Weight = weight;
         }
         public decimal Weight { get; set; }
 
         public override string ShowFullName()
         {
-            return FirstName + " " + LastName + " " + Weight+ " " + "is registered as an athlete.";
+            return FirstName + " " + LastName + " " + Weight+ "kg " + "is registered as an athlete.";
         }
     }
 }

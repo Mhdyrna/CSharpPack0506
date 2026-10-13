@@ -25,7 +25,7 @@ namespace MyProject0506.Models
         }
         public int ExperienceYears { get; set; }
 
-        public virtual string ShowFullName()
+        public override string ShowFullName()
         {
             return $"{FirstName} {LastName} with {ExperienceYears} experience years is registered as a master";
         }
