@@ -7,6 +7,7 @@ namespace MyWinFormProject
         public LoginForm()
         {
             InitializeComponent();
+          
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -16,11 +17,25 @@ namespace MyWinFormProject
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            if (userNameTextBox.Text == "admin" && passwordTextBox.Text == "admin")
+            string username= userNameTextBox.Text;
+            string password= passwordTextBox.Text;
+            if (username == "admin" && password == "admin")
             {
                 LayoutForm layoutForm = new LayoutForm();
                 layoutForm.Show();
             }
+            else
+            {
+                MessageBox.Show("اطلاعات را به درستی وارد کنید.");
+                userNameTextBox.Text=string.Empty;
+                passwordTextBox.Text=string.Empty;
+
+            }
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

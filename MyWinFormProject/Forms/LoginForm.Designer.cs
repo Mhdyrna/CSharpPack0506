@@ -68,6 +68,7 @@
             passwordTextBox.Name = "passwordTextBox";
             passwordTextBox.Size = new Size(577, 51);
             passwordTextBox.TabIndex = 1;
+            passwordTextBox.UseSystemPasswordChar = true;
             // 
             // loginButton
             // 
@@ -82,6 +83,7 @@
             // 
             // LoginForm
             // 
+            AcceptButton = loginButton;
             AutoScaleDimensions = new SizeF(18F, 45F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(250, 247, 245);
@@ -98,6 +100,7 @@
             RightToLeftLayout = true;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ورود به سامانه";
+            Load += LoginForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
