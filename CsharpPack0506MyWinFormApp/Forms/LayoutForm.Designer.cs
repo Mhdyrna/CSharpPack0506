@@ -29,38 +29,39 @@
         private void InitializeComponent()
         {
             menuStrip1 = new MenuStrip();
-            ثبتنامToolStripMenuItem = new ToolStripMenuItem();
-            شهریهToolStripMenuItem = new ToolStripMenuItem();
+            دانشجویانToolStripMenuItem = new ToolStripMenuItem();
+            ثبتنامدانشجوToolStripMenuItem = new ToolStripMenuItem();
             مشاهدهدانشجویانToolStripMenuItem = new ToolStripMenuItem();
+            ترمToolStripMenuItem = new ToolStripMenuItem();
+            ایجادترمهاToolStripMenuItem = new ToolStripMenuItem();
             مشاهدهترمهاToolStripMenuItem = new ToolStripMenuItem();
-            ترمهایباقیماندهToolStripMenuItem = new ToolStripMenuItem();
-            ترمباقیماندهToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(40, 40);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { ثبتنامToolStripMenuItem, مشاهدهترمهاToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { دانشجویانToolStripMenuItem, ترمToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 52);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
-            // ثبتنامToolStripMenuItem
+            // دانشجویانToolStripMenuItem
             // 
-            ثبتنامToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { شهریهToolStripMenuItem, مشاهدهدانشجویانToolStripMenuItem });
-            ثبتنامToolStripMenuItem.Name = "ثبتنامToolStripMenuItem";
-            ثبتنامToolStripMenuItem.Size = new Size(174, 48);
-            ثبتنامToolStripMenuItem.Text = "دانشجویان";
+            دانشجویانToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ثبتنامدانشجوToolStripMenuItem, مشاهدهدانشجویانToolStripMenuItem });
+            دانشجویانToolStripMenuItem.Name = "دانشجویانToolStripMenuItem";
+            دانشجویانToolStripMenuItem.Size = new Size(174, 48);
+            دانشجویانToolStripMenuItem.Text = "دانشجویان";
+            دانشجویانToolStripMenuItem.Click += ثبتنامToolStripMenuItem_Click;
             // 
-            // شهریهToolStripMenuItem
+            // ثبتنامدانشجوToolStripMenuItem
             // 
-            شهریهToolStripMenuItem.Name = "شهریهToolStripMenuItem";
-            شهریهToolStripMenuItem.Size = new Size(448, 54);
-            شهریهToolStripMenuItem.Text = "ثبت نام ";
-            شهریهToolStripMenuItem.Click += شهریهToolStripMenuItem_Click;
+            ثبتنامدانشجوToolStripMenuItem.Name = "ثبتنامدانشجوToolStripMenuItem";
+            ثبتنامدانشجوToolStripMenuItem.Size = new Size(448, 54);
+            ثبتنامدانشجوToolStripMenuItem.Text = "ثبت نام دانشجو";
+            ثبتنامدانشجوToolStripMenuItem.Click += ثبتنامدانشجوToolStripMenuItem_Click;
             // 
             // مشاهدهدانشجویانToolStripMenuItem
             // 
@@ -69,26 +70,26 @@
             مشاهدهدانشجویانToolStripMenuItem.Text = "مشاهده دانشجویان";
             مشاهدهدانشجویانToolStripMenuItem.Click += مشاهدهدانشجویانToolStripMenuItem_Click;
             // 
+            // ترمToolStripMenuItem
+            // 
+            ترمToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ایجادترمهاToolStripMenuItem, مشاهدهترمهاToolStripMenuItem });
+            ترمToolStripMenuItem.Name = "ترمToolStripMenuItem";
+            ترمToolStripMenuItem.Size = new Size(116, 48);
+            ترمToolStripMenuItem.Text = "ترم ها";
+            // 
+            // ایجادترمهاToolStripMenuItem
+            // 
+            ایجادترمهاToolStripMenuItem.Name = "ایجادترمهاToolStripMenuItem";
+            ایجادترمهاToolStripMenuItem.Size = new Size(448, 54);
+            ایجادترمهاToolStripMenuItem.Text = "ایجاد ترم ";
+            ایجادترمهاToolStripMenuItem.Click += ایجادترمهاToolStripMenuItem_Click;
+            // 
             // مشاهدهترمهاToolStripMenuItem
             // 
-            مشاهدهترمهاToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ترمباقیماندهToolStripMenuItem, ترمهایباقیماندهToolStripMenuItem });
             مشاهدهترمهاToolStripMenuItem.Name = "مشاهدهترمهاToolStripMenuItem";
-            مشاهدهترمهاToolStripMenuItem.Size = new Size(225, 48);
+            مشاهدهترمهاToolStripMenuItem.Size = new Size(448, 54);
             مشاهدهترمهاToolStripMenuItem.Text = "مشاهده ترم ها";
-            // 
-            // ترمهایباقیماندهToolStripMenuItem
-            // 
-            ترمهایباقیماندهToolStripMenuItem.Name = "ترمهایباقیماندهToolStripMenuItem";
-            ترمهایباقیماندهToolStripMenuItem.Size = new Size(448, 54);
-            ترمهایباقیماندهToolStripMenuItem.Text = "لیست ترمها";
-            ترمهایباقیماندهToolStripMenuItem.Click += ترمهایباقیماندهToolStripMenuItem_Click;
-            // 
-            // ترمباقیماندهToolStripMenuItem
-            // 
-            ترمباقیماندهToolStripMenuItem.Name = "ترمباقیماندهToolStripMenuItem";
-            ترمباقیماندهToolStripMenuItem.Size = new Size(448, 54);
-            ترمباقیماندهToolStripMenuItem.Text = "ترم باقیمانده";
-            ترمباقیماندهToolStripMenuItem.Click += ترمباقیماندهToolStripMenuItem_Click;
+            مشاهدهترمهاToolStripMenuItem.Click += مشاهدهترمهاToolStripMenuItem_Click;
             // 
             // LayoutForm
             // 
@@ -108,11 +109,11 @@
         #endregion
 
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem ثبتنامToolStripMenuItem;
-        private ToolStripMenuItem شهریهToolStripMenuItem;
-        private ToolStripMenuItem مشاهدهترمهاToolStripMenuItem;
-        private ToolStripMenuItem ترمهایباقیماندهToolStripMenuItem;
+        private ToolStripMenuItem دانشجویانToolStripMenuItem;
         private ToolStripMenuItem مشاهدهدانشجویانToolStripMenuItem;
-        private ToolStripMenuItem ترمباقیماندهToolStripMenuItem;
+        private ToolStripMenuItem ثبتنامدانشجوToolStripMenuItem;
+        private ToolStripMenuItem ترمToolStripMenuItem;
+        private ToolStripMenuItem ایجادترمهاToolStripMenuItem;
+        private ToolStripMenuItem مشاهدهترمهاToolStripMenuItem;
     }
 }

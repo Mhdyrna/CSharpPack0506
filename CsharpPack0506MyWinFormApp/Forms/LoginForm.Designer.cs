@@ -39,7 +39,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(238, 112);
+            label1.Location = new Point(87, 102);
             label1.Name = "label1";
             label1.Size = new Size(141, 41);
             label1.TabIndex = 0;
@@ -47,14 +47,14 @@
             // 
             // userNameTextBox
             // 
-            userNameTextBox.Location = new Point(384, 112);
+            userNameTextBox.Location = new Point(251, 96);
             userNameTextBox.Name = "userNameTextBox";
             userNameTextBox.Size = new Size(518, 47);
             userNameTextBox.TabIndex = 1;
             // 
             // passwordTextBox
             // 
-            passwordTextBox.Location = new Point(384, 213);
+            passwordTextBox.Location = new Point(251, 197);
             passwordTextBox.Name = "passwordTextBox";
             passwordTextBox.Size = new Size(518, 47);
             passwordTextBox.TabIndex = 3;
@@ -62,7 +62,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(238, 213);
+            label2.Location = new Point(105, 197);
             label2.Name = "label2";
             label2.Size = new Size(123, 41);
             label2.TabIndex = 2;
@@ -73,9 +73,9 @@
             loginButton.BackColor = SystemColors.ActiveCaption;
             loginButton.Font = new Font("Tahoma", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             loginButton.ForeColor = SystemColors.ActiveCaptionText;
-            loginButton.Location = new Point(283, 342);
+            loginButton.Location = new Point(105, 332);
             loginButton.Name = "loginButton";
-            loginButton.Size = new Size(594, 58);
+            loginButton.Size = new Size(664, 58);
             loginButton.TabIndex = 4;
             loginButton.Text = "ورود";
             loginButton.UseVisualStyleBackColor = false;
@@ -86,15 +86,15 @@
             menuStrip1.ImageScalingSize = new Size(40, 40);
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(920, 52);
+            menuStrip1.Size = new Size(846, 24);
             menuStrip1.TabIndex = 5;
             menuStrip1.Text = "menuStrip1";
             // 
-            // Form1
+            // LoginForm
             // 
             AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(920, 726);
+            ClientSize = new Size(846, 465);
             Controls.Add(loginButton);
             Controls.Add(passwordTextBox);
             Controls.Add(label2);
@@ -102,7 +102,7 @@
             Controls.Add(label1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Name = "Form1";
+            Name = "LoginForm";
             Text = "Form1";
             Load += Form1_Load;
             ResumeLayout(false);

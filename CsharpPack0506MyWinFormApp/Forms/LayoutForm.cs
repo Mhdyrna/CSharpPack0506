@@ -27,16 +27,26 @@ namespace CsharpPack0506MyWinFormApp.Forms
             userListForm.Show();
         }
 
-        private void ترمهایباقیماندهToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void ثبتنامToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            TermListForm termListForm = new TermListForm();
-            termListForm.Show();
         }
 
-        private void ترمباقیماندهToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ایجادترمهاToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ثبتنامدانشجوToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void مشاهدهترمهاToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TermListForm termListForm = new TermListForm();
+            termListForm.Show();
         }
     }
 }
