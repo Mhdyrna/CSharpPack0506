@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MyProject0506.Models
 {
-    internal class User
+    abstract class User
     {
 
         public User(string firstName,string lastName,string nationalCode,string mobile)
@@ -28,10 +28,7 @@ namespace MyProject0506.Models
 
         public DateTime BirthDate { get; set; }
 
-        public virtual string ShowFullName()
-        {
-            return FirstName + " " + LastName + "is registered as an user.";
-        }
+        public abstract string ShowFullName();
 
 
     }

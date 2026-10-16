@@ -7,8 +7,8 @@ namespace MyProject0506
     {
         static void Main(string[] args)
         {
-            User firstUser = new User(firstName: "reza", lastName: "ramezani", nationalCode: "0044223", mobile: "09124457898");
-            Console.WriteLine(firstUser.ShowFullName());
+            //User firstUser = new User(firstName: "reza", lastName: "ramezani", nationalCode: "0044223", mobile: "09124457898");
+            //Console.WriteLine(firstUser.ShowFullName());
 
             DateTime birthDate = DateTime.Now.AddYears(-30);
             Athlete firstAthlete = new Athlete("karim", "mirzaee", "044556677", "09121527852");
