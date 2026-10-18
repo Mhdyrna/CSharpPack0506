@@ -28,11 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
             userNameTextBox = new TextBox();
             label2 = new Label();
             passwordTextBox = new TextBox();
             loginButton = new Button();
+            timeLabel = new Label();
+            dateLabel = new Label();
+            clockTimer = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // label1
@@ -81,6 +85,33 @@
             loginButton.UseVisualStyleBackColor = false;
             loginButton.Click += loginButton_Click;
             // 
+            // timeLabel
+            // 
+            timeLabel.AutoSize = true;
+            timeLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            timeLabel.ForeColor = SystemColors.ActiveCaptionText;
+            timeLabel.Location = new Point(38, 76);
+            timeLabel.Name = "timeLabel";
+            timeLabel.Size = new Size(97, 41);
+            timeLabel.TabIndex = 3;
+            timeLabel.Text = "ساعت";
+            // 
+            // dateLabel
+            // 
+            dateLabel.AutoSize = true;
+            dateLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dateLabel.ForeColor = SystemColors.ActiveCaptionText;
+            dateLabel.Location = new Point(38, 23);
+            dateLabel.Name = "dateLabel";
+            dateLabel.Size = new Size(80, 41);
+            dateLabel.TabIndex = 3;
+            dateLabel.Text = "تاریخ";
+            // 
+            // clockTimer
+            // 
+            clockTimer.Interval = 1000;
+            clockTimer.Tick += clockTimer_Tick;
+            // 
             // LoginForm
             // 
             AcceptButton = loginButton;
@@ -88,6 +119,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(250, 247, 245);
             ClientSize = new Size(601, 891);
+            Controls.Add(dateLabel);
+            Controls.Add(timeLabel);
             Controls.Add(loginButton);
             Controls.Add(passwordTextBox);
             Controls.Add(label2);
@@ -112,5 +145,8 @@
         private Label label2;
         private TextBox passwordTextBox;
         private Button loginButton;
+        private Label timeLabel;
+        private Label dateLabel;
+        private System.Windows.Forms.Timer clockTimer;
     }
 }
