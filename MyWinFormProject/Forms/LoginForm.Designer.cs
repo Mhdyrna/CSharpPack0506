@@ -37,6 +37,7 @@
             timeLabel = new Label();
             dateLabel = new Label();
             clockTimer = new System.Windows.Forms.Timer(components);
+            timerOpacity = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // label1
@@ -84,6 +85,8 @@
             loginButton.Text = "ورود";
             loginButton.UseVisualStyleBackColor = false;
             loginButton.Click += loginButton_Click;
+            loginButton.MouseEnter += loginButton_MouseEnter;
+            loginButton.MouseLeave += loginButton_MouseLeave;
             // 
             // timeLabel
             // 
@@ -112,6 +115,11 @@
             clockTimer.Interval = 1000;
             clockTimer.Tick += clockTimer_Tick;
             // 
+            // timerOpacity
+            // 
+            timerOpacity.Interval = 20;
+            timerOpacity.Tick += timerOpacity_Tick;
+            // 
             // LoginForm
             // 
             AcceptButton = loginButton;
@@ -130,6 +138,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "LoginForm";
+            Opacity = 0D;
             RightToLeftLayout = true;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ورود به سامانه";
@@ -148,5 +157,6 @@
         private Label timeLabel;
         private Label dateLabel;
         private System.Windows.Forms.Timer clockTimer;
+        private System.Windows.Forms.Timer timerOpacity;
     }
 }

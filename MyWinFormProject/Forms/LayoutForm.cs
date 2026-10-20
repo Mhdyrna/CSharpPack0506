@@ -19,5 +19,29 @@ namespace MyWinFormProject.Forms
         {
 
         }
+
+        private void مشاهدهورزشکارانToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AthleteListForm athleteListForm = new AthleteListForm();
+            athleteListForm.Show();
+        }
+
+        private void ثبتنامورزشکارانToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegisterAthleteForm registerAthleteForm = new RegisterAthleteForm();
+            registerAthleteForm.Show();
+        }
+
+        private void مشاهدهرشتههاToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CategoryListForm categoryListForm = new CategoryListForm();
+            categoryListForm.Show();
+        }
+
+        private void ایجادرشتههاToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddCategoryForm addCategoryForm = new AddCategoryForm();    
+            addCategoryForm.Show();
+        }
     }
 }

@@ -11,6 +11,8 @@ namespace MyWinFormProject
             InitializeComponent();
             UpdateClock();
             clockTimer.Start();
+            timerOpacity.Interval = 20;
+            timerOpacity.Start();
 
 
         }
@@ -90,13 +92,36 @@ namespace MyWinFormProject
         private void UpdateClock()
         {
 
-            timeLabel.Text = DateTime.Now.ToString("hh:mm:ss");
+            timeLabel.Text = DateTime.Now.ToString("HH:mm:ss");
             dateLabel.Text = DateTime.Now.ToString("yyyy-MM-dd",
                                                     CultureInfo.InvariantCulture);
         }
         private void clockTimer_Tick(object sender, EventArgs e)
         {
             UpdateClock();
+        }
+
+        private void timerOpacity_Tick(object sender, EventArgs e)
+        {
+            if (this.Opacity < 1)
+            {
+                this.Opacity += 0.025;
+            }
+            else
+            {
+                this.Opacity = 1;
+                timerOpacity.Stop();
+            }
+        }
+
+        private void loginButton_MouseEnter(object sender, EventArgs e)
+        {
+            loginButton.BackColor = Color.LightGreen;
+        }
+
+        private void loginButton_MouseLeave(object sender, EventArgs e)
+        {
+            loginButton.BackColor = Color.LightBlue;
         }
     }
 }

@@ -48,7 +48,7 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.RightToLeft = RightToLeft.Yes;
-            menuStrip1.Size = new Size(800, 49);
+            menuStrip1.Size = new Size(800, 52);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -56,7 +56,7 @@
             // 
             ورزشکارانToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ثبتنامورزشکارانToolStripMenuItem, مشاهدهورزشکارانToolStripMenuItem });
             ورزشکارانToolStripMenuItem.Name = "ورزشکارانToolStripMenuItem";
-            ورزشکارانToolStripMenuItem.Size = new Size(163, 45);
+            ورزشکارانToolStripMenuItem.Size = new Size(163, 48);
             ورزشکارانToolStripMenuItem.Text = "ورزشکاران";
             // 
             // ثبتنامورزشکارانToolStripMenuItem
@@ -64,37 +64,41 @@
             ثبتنامورزشکارانToolStripMenuItem.Name = "ثبتنامورزشکارانToolStripMenuItem";
             ثبتنامورزشکارانToolStripMenuItem.Size = new Size(414, 54);
             ثبتنامورزشکارانToolStripMenuItem.Text = "ثبت نام ورزشکاران";
+            ثبتنامورزشکارانToolStripMenuItem.Click += ثبتنامورزشکارانToolStripMenuItem_Click;
             // 
             // مشاهدهورزشکارانToolStripMenuItem
             // 
             مشاهدهورزشکارانToolStripMenuItem.Name = "مشاهدهورزشکارانToolStripMenuItem";
             مشاهدهورزشکارانToolStripMenuItem.Size = new Size(414, 54);
             مشاهدهورزشکارانToolStripMenuItem.Text = "مشاهده ورزشکاران";
+            مشاهدهورزشکارانToolStripMenuItem.Click += مشاهدهورزشکارانToolStripMenuItem_Click;
             // 
             // رشتههاToolStripMenuItem
             // 
             رشتههاToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ایجادرشتههاToolStripMenuItem, مشاهدهرشتههاToolStripMenuItem });
             رشتههاToolStripMenuItem.Name = "رشتههاToolStripMenuItem";
-            رشتههاToolStripMenuItem.Size = new Size(138, 45);
+            رشتههاToolStripMenuItem.Size = new Size(138, 48);
             رشتههاToolStripMenuItem.Text = "رشته ها";
             // 
             // ایجادرشتههاToolStripMenuItem
             // 
             ایجادرشتههاToolStripMenuItem.Name = "ایجادرشتههاToolStripMenuItem";
-            ایجادرشتههاToolStripMenuItem.Size = new Size(389, 54);
+            ایجادرشتههاToolStripMenuItem.Size = new Size(448, 54);
             ایجادرشتههاToolStripMenuItem.Text = "ایجاد رشته ها";
+            ایجادرشتههاToolStripMenuItem.Click += ایجادرشتههاToolStripMenuItem_Click;
             // 
             // مشاهدهرشتههاToolStripMenuItem
             // 
             مشاهدهرشتههاToolStripMenuItem.Name = "مشاهدهرشتههاToolStripMenuItem";
-            مشاهدهرشتههاToolStripMenuItem.Size = new Size(389, 54);
+            مشاهدهرشتههاToolStripMenuItem.Size = new Size(448, 54);
             مشاهدهرشتههاToolStripMenuItem.Text = "مشاهده رشته ها";
+            مشاهدهرشتههاToolStripMenuItem.Click += مشاهدهرشتههاToolStripMenuItem_Click;
             // 
             // سانسهاToolStripMenuItem
             // 
             سانسهاToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { ایجادسانسToolStripMenuItem, مشاهدهسانسهاToolStripMenuItem });
             سانسهاToolStripMenuItem.Name = "سانسهاToolStripMenuItem";
-            سانسهاToolStripMenuItem.Size = new Size(164, 45);
+            سانسهاToolStripMenuItem.Size = new Size(164, 48);
             سانسهاToolStripMenuItem.Text = "سانس ها ";
             // 
             // ایجادسانسToolStripMenuItem
