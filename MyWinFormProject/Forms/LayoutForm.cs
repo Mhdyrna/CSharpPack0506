@@ -40,8 +40,20 @@ namespace MyWinFormProject.Forms
 
         private void ایجادرشتههاToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddCategoryForm addCategoryForm = new AddCategoryForm();    
+            AddCategoryForm addCategoryForm = new AddCategoryForm();
             addCategoryForm.Show();
+        }
+
+        private void ایجادسانسToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddSessionForm addSessionForm = new AddSessionForm();
+            addSessionForm.Show();
+        }
+
+        private void مشاهدهسانسهاToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SessionListForm sessionListForm = new SessionListForm();
+            sessionListForm.Show();
         }
     }
 }

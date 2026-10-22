@@ -83,14 +83,14 @@
             // ایجادرشتههاToolStripMenuItem
             // 
             ایجادرشتههاToolStripMenuItem.Name = "ایجادرشتههاToolStripMenuItem";
-            ایجادرشتههاToolStripMenuItem.Size = new Size(448, 54);
+            ایجادرشتههاToolStripMenuItem.Size = new Size(389, 54);
             ایجادرشتههاToolStripMenuItem.Text = "ایجاد رشته ها";
             ایجادرشتههاToolStripMenuItem.Click += ایجادرشتههاToolStripMenuItem_Click;
             // 
             // مشاهدهرشتههاToolStripMenuItem
             // 
             مشاهدهرشتههاToolStripMenuItem.Name = "مشاهدهرشتههاToolStripMenuItem";
-            مشاهدهرشتههاToolStripMenuItem.Size = new Size(448, 54);
+            مشاهدهرشتههاToolStripMenuItem.Size = new Size(389, 54);
             مشاهدهرشتههاToolStripMenuItem.Text = "مشاهده رشته ها";
             مشاهدهرشتههاToolStripMenuItem.Click += مشاهدهرشتههاToolStripMenuItem_Click;
             // 
@@ -104,14 +104,16 @@
             // ایجادسانسToolStripMenuItem
             // 
             ایجادسانسToolStripMenuItem.Name = "ایجادسانسToolStripMenuItem";
-            ایجادسانسToolStripMenuItem.Size = new Size(407, 54);
+            ایجادسانسToolStripMenuItem.Size = new Size(448, 54);
             ایجادسانسToolStripMenuItem.Text = "ایجاد سانس";
+            ایجادسانسToolStripMenuItem.Click += ایجادسانسToolStripMenuItem_Click;
             // 
             // مشاهدهسانسهاToolStripMenuItem
             // 
             مشاهدهسانسهاToolStripMenuItem.Name = "مشاهدهسانسهاToolStripMenuItem";
-            مشاهدهسانسهاToolStripMenuItem.Size = new Size(407, 54);
+            مشاهدهسانسهاToolStripMenuItem.Size = new Size(448, 54);
             مشاهدهسانسهاToolStripMenuItem.Text = "مشاهده سانس ها";
+            مشاهدهسانسهاToolStripMenuItem.Click += مشاهدهسانسهاToolStripMenuItem_Click;
             // 
             // LayoutForm
             // 
