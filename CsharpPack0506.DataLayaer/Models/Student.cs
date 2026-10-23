@@ -6,26 +6,24 @@ namespace CSharpPack0506.DataLayer.Models
 {
     public class Student : User
     {
-        public Student(string firstName, string lastName, string mobile, string nationalCode) : base(firstName, lastName, mobile, nationalCode)
+        public Student() : base("", "", "", "")
         {
-            if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(nationalCode))
-            {
-                throw new Exception("Please enter your information correctly!");
-            }
 
-            FirstName = firstName;
-            LastName = lastName;
-            Mobile = mobile;
-            NationalCode = nationalCode;
         }
-        public Student(string firstname, string lastname, string mobile, string nationalcode, DateTime birthDate) : this(firstname, lastname, mobile, nationalcode)
+
+        //constructor
+        public Student(string name, string lastName, string mobile, string nationalCode) : base(name, lastName, mobile, nationalCode)
+        {
+
+        }
+        public Student(string name, string lastName, string mobile, string nationalCode, DateTime birthDate) : this(name, lastName, mobile, nationalCode)
         {
             if (birthDate == DateTime.MinValue)
-                throw new Exception("Please enter your birthdate!!");
+                throw new Exception("لطفا تاریخ تولد را به صورت کامل و صحیح وارد نمایید.");
 
             BirthDate = birthDate;
-
         }
+ 
         public string Relation { get; set; }
 
         public string GetInfo()

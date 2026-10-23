@@ -8,10 +8,10 @@ namespace CSharpPack0506.DataLayer.Models
     {
         public User(string firstName, string lastName, string mobile, string nationalCode)
         {
-            if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(nationalCode))
-            {
-                throw new Exception("Please enter your information correctly!");
-            }
+            //if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(nationalCode))
+            //{
+            //    throw new Exception("Please enter your information correctly!");
+            //}
 
             FirstName = firstName;
             LastName = lastName;

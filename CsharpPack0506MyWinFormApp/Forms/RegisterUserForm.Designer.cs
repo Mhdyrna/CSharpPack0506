@@ -39,6 +39,7 @@
             searchUserButton = new Button();
             RegisterUserButton = new Button();
             userDataGridView = new DataGridView();
+            registerDataMock = new Button();
             ((System.ComponentModel.ISupportInitialize)userDataGridView).BeginInit();
             SuspendLayout();
             // 
@@ -134,11 +135,22 @@
             userDataGridView.Size = new Size(806, 769);
             userDataGridView.TabIndex = 8;
             // 
+            // registerDataMock
+            // 
+            registerDataMock.Location = new Point(29, 478);
+            registerDataMock.Name = "registerDataMock";
+            registerDataMock.Size = new Size(529, 58);
+            registerDataMock.TabIndex = 9;
+            registerDataMock.Text = "افزودن اعضا بصورت ماک";
+            registerDataMock.UseVisualStyleBackColor = true;
+            registerDataMock.Click += registerDataMock_Click;
+            // 
             // RegisterUserForm
             // 
             AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1426, 808);
+            Controls.Add(registerDataMock);
             Controls.Add(userDataGridView);
             Controls.Add(RegisterUserButton);
             Controls.Add(searchUserButton);
@@ -170,5 +182,6 @@
         private Button searchUserButton;
         private Button RegisterUserButton;
         private DataGridView userDataGridView;
+        private Button registerDataMock;
     }
 }
