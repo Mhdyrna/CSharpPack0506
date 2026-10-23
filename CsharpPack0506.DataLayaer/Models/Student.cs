@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CSharpPack0506.Models
+namespace CSharpPack0506.DataLayer.Models
 {
-    internal class Student : User
+    public class Student : User
     {
         public Student(string firstName, string lastName, string mobile, string nationalCode) : base(firstName, lastName, mobile, nationalCode)
         {

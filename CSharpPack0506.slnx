@@ -2,10 +2,16 @@
   <Folder Name="/docs/">
     <File Path="info.txt" />
   </Folder>
-  <Folder Name="/src/">
+  <Folder Name="/src/" />
+  <Folder Name="/src/BusinessLayer/">
+    <Project Path="CSharpPack0506.BusinessLayer/CSharpPack0506.BusinessLayer.csproj" Id="25a361da-1cb1-42ee-942d-b2c4a7dc16b1" />
+  </Folder>
+  <Folder Name="/src/DataLayer/">
+    <Project Path="CsharpPack0506.DataLayaer/CsharpPack0506.DataLayer.csproj" Id="c5e29efe-3996-4de2-bfbf-caa437ea7119" />
+  </Folder>
+  <Folder Name="/src/PresentationLayer/">
     <Project Path="CSharpPack0506/CSharpPack0506.csproj" />
     <Project Path="CsharpPack0506MyWinFormApp/CsharpPack0506MyWinFormApp.csproj" Id="6e9bb2a9-f8a9-4e15-b99b-0d2985fd8aac" />
-    <Project Path="MyProject0506/MyProject0506.csproj" Id="82d85326-adf0-49a8-b20a-6dbc077b9c7a" />
     <Project Path="MyWinFormProject/MyWinFormProject.csproj" Id="225ca686-d1ce-40a6-80cc-7004c813b502" />
   </Folder>
 </Solution>

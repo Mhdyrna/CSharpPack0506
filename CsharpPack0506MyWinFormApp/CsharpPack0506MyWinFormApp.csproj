@@ -13,6 +13,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CsharpPack0506.DataLayaer\CsharpPack0506.DataLayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Files\Configs\logins.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CSharpPack0506.Models
+namespace CSharpPack0506.DataLayer.Models
 {
-    internal class User
+    public class Master: User
     {
-        public User(string firstName, string lastName, string mobile, string nationalCode)
+        public Master(string firstName, string lastName, string mobile, string nationalCode) : base(firstName, lastName, mobile, nationalCode)
         {
             if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(nationalCode))
             {
@@ -18,12 +18,6 @@ namespace CSharpPack0506.Models
             Mobile = mobile;
             NationalCode = nationalCode;
         }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Mobile { get; set; }
-        public string NationalCode { get; set; }
-        public string CardNumber { get; set; }
-        public DateTime BirthDate { get; set; }
-
+        public string Card { get; set; }
     }
 }

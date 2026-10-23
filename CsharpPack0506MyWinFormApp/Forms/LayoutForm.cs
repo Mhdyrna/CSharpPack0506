@@ -40,7 +40,8 @@ namespace CsharpPack0506MyWinFormApp.Forms
 
         private void ثبتنامدانشجوToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            RegisterUserForm registerUserForm = new RegisterUserForm();
+            registerUserForm.Show();
         }
 
         private void مشاهدهترمهاToolStripMenuItem_Click(object sender, EventArgs e)
