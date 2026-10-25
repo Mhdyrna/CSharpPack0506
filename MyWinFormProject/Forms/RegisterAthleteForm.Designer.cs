@@ -28,18 +28,164 @@
         /// </summary>
         private void InitializeComponent()
         {
+            firstNameLabel = new Label();
+            lastNameLabel = new Label();
+            firstAthleteNameTextBox = new TextBox();
+            lastAthleteNameTextBox = new TextBox();
+            mobileLabel = new Label();
+            athleteMobileNumberTextBox = new TextBox();
+            athleteNationalCodeTextBox = new TextBox();
+            nationalCodeLabel = new Label();
+            searchAthleteButton = new Button();
+            registerAthleteButton = new Button();
+            registerAthleteDataMockButton = new Button();
+            athleteDataGridView = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)athleteDataGridView).BeginInit();
             SuspendLayout();
+            // 
+            // firstNameLabel
+            // 
+            firstNameLabel.AutoSize = true;
+            firstNameLabel.Location = new Point(1295, 34);
+            firstNameLabel.Name = "firstNameLabel";
+            firstNameLabel.Size = new Size(62, 41);
+            firstNameLabel.TabIndex = 0;
+            firstNameLabel.Text = "نام ";
+            // 
+            // lastNameLabel
+            // 
+            lastNameLabel.AutoSize = true;
+            lastNameLabel.Location = new Point(1181, 104);
+            lastNameLabel.Name = "lastNameLabel";
+            lastNameLabel.Size = new Size(176, 41);
+            lastNameLabel.TabIndex = 1;
+            lastNameLabel.Text = "نام خانوادگی";
+            // 
+            // firstAthleteNameTextBox
+            // 
+            firstAthleteNameTextBox.Location = new Point(786, 34);
+            firstAthleteNameTextBox.Name = "firstAthleteNameTextBox";
+            firstAthleteNameTextBox.RightToLeft = RightToLeft.Yes;
+            firstAthleteNameTextBox.Size = new Size(474, 47);
+            firstAthleteNameTextBox.TabIndex = 2;
+            // 
+            // lastAthleteNameTextBox
+            // 
+            lastAthleteNameTextBox.Location = new Point(786, 104);
+            lastAthleteNameTextBox.Name = "lastAthleteNameTextBox";
+            lastAthleteNameTextBox.RightToLeft = RightToLeft.Yes;
+            lastAthleteNameTextBox.Size = new Size(389, 47);
+            lastAthleteNameTextBox.TabIndex = 2;
+            // 
+            // mobileLabel
+            // 
+            mobileLabel.AutoSize = true;
+            mobileLabel.Location = new Point(1184, 177);
+            mobileLabel.Name = "mobileLabel";
+            mobileLabel.Size = new Size(173, 41);
+            mobileLabel.TabIndex = 3;
+            mobileLabel.Text = "شماره تماس";
+            // 
+            // athleteMobileNumberTextBox
+            // 
+            athleteMobileNumberTextBox.Location = new Point(786, 177);
+            athleteMobileNumberTextBox.Name = "athleteMobileNumberTextBox";
+            athleteMobileNumberTextBox.RightToLeft = RightToLeft.Yes;
+            athleteMobileNumberTextBox.Size = new Size(389, 47);
+            athleteMobileNumberTextBox.TabIndex = 2;
+            // 
+            // athleteNationalCodeTextBox
+            // 
+            athleteNationalCodeTextBox.Location = new Point(786, 249);
+            athleteNationalCodeTextBox.Name = "athleteNationalCodeTextBox";
+            athleteNationalCodeTextBox.RightToLeft = RightToLeft.Yes;
+            athleteNationalCodeTextBox.Size = new Size(389, 47);
+            athleteNationalCodeTextBox.TabIndex = 2;
+            // 
+            // nationalCodeLabel
+            // 
+            nationalCodeLabel.AutoSize = true;
+            nationalCodeLabel.Location = new Point(1248, 252);
+            nationalCodeLabel.Name = "nationalCodeLabel";
+            nationalCodeLabel.Size = new Size(109, 41);
+            nationalCodeLabel.TabIndex = 3;
+            nationalCodeLabel.Text = "کد ملی";
+            // 
+            // searchAthleteButton
+            // 
+            searchAthleteButton.Location = new Point(786, 324);
+            searchAthleteButton.Name = "searchAthleteButton";
+            searchAthleteButton.Size = new Size(571, 58);
+            searchAthleteButton.TabIndex = 4;
+            searchAthleteButton.Text = "جست و جو ورزشکار";
+            searchAthleteButton.UseVisualStyleBackColor = true;
+            // 
+            // registerAthleteButton
+            // 
+            registerAthleteButton.Location = new Point(786, 408);
+            registerAthleteButton.Name = "registerAthleteButton";
+            registerAthleteButton.Size = new Size(571, 58);
+            registerAthleteButton.TabIndex = 4;
+            registerAthleteButton.Text = "ثبت نام ورزشکار";
+            registerAthleteButton.UseVisualStyleBackColor = true;
+            registerAthleteButton.Click += registerAthleteButton_Click;
+            // 
+            // registerAthleteDataMockButton
+            // 
+            registerAthleteDataMockButton.Location = new Point(786, 494);
+            registerAthleteDataMockButton.Name = "registerAthleteDataMockButton";
+            registerAthleteDataMockButton.Size = new Size(571, 58);
+            registerAthleteDataMockButton.TabIndex = 4;
+            registerAthleteDataMockButton.Text = "ثبت نام ورزشکاران بصورت ماک";
+            registerAthleteDataMockButton.UseVisualStyleBackColor = true;
+            registerAthleteDataMockButton.Click += registerAthleteDataMockButton_Click;
+            // 
+            // athleteDataGridView
+            // 
+            athleteDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            athleteDataGridView.Location = new Point(25, 34);
+            athleteDataGridView.Name = "athleteDataGridView";
+            athleteDataGridView.RowHeadersWidth = 102;
+            athleteDataGridView.Size = new Size(723, 765);
+            athleteDataGridView.TabIndex = 5;
             // 
             // RegisterAthleteForm
             // 
             AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1029, 621);
+            ClientSize = new Size(1371, 811);
+            Controls.Add(athleteDataGridView);
+            Controls.Add(registerAthleteDataMockButton);
+            Controls.Add(registerAthleteButton);
+            Controls.Add(searchAthleteButton);
+            Controls.Add(nationalCodeLabel);
+            Controls.Add(mobileLabel);
+            Controls.Add(athleteNationalCodeTextBox);
+            Controls.Add(athleteMobileNumberTextBox);
+            Controls.Add(lastAthleteNameTextBox);
+            Controls.Add(firstAthleteNameTextBox);
+            Controls.Add(lastNameLabel);
+            Controls.Add(firstNameLabel);
             Name = "RegisterAthleteForm";
             Text = "RegisterAthleteForm";
+            ((System.ComponentModel.ISupportInitialize)athleteDataGridView).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label firstNameLabel;
+        private Label lastNameLabel;
+        private TextBox firstAthleteNameTextBox;
+        private TextBox lastAthleteNameTextBox;
+        private Label mobileLabel;
+        private TextBox athleteMobileNumberTextBox;
+        private TextBox athleteNationalCodeTextBox;
+        private Label nationalCodeLabel;
+        private Button searchAthleteButton;
+        private Button registerAthleteButton;
+        private Button registerAthleteDataMockButton;
+        private DataGridView athleteDataGridView;
     }
 }
