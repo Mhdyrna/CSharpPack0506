@@ -55,7 +55,7 @@
             userNameTextBox.Name = "userNameTextBox";
             userNameTextBox.RightToLeft = RightToLeft.No;
             userNameTextBox.Size = new Size(577, 51);
-            userNameTextBox.TabIndex = 1;
+            userNameTextBox.TabIndex = 0;
             userNameTextBox.TextChanged += textBox1_TextChanged;
             // 
             // label2
@@ -77,7 +77,7 @@
             // 
             // loginButton
             // 
-            loginButton.BackColor = SystemColors.ActiveCaption;
+            loginButton.BackColor = SystemColors.MenuHighlight;
             loginButton.Location = new Point(12, 528);
             loginButton.Name = "loginButton";
             loginButton.Size = new Size(577, 89);
@@ -126,6 +126,7 @@
             AutoScaleDimensions = new SizeF(18F, 45F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(250, 247, 245);
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(601, 891);
             Controls.Add(dateLabel);
             Controls.Add(timeLabel);

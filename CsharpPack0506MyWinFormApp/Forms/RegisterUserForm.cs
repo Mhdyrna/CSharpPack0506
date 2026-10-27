@@ -65,5 +65,10 @@ namespace CsharpPack0506MyWinFormApp.Forms
 
 
         }
+
+        private void searchUserButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -115,6 +115,7 @@
             searchUserButton.TabIndex = 6;
             searchUserButton.Text = "جست و جو کاربر";
             searchUserButton.UseVisualStyleBackColor = true;
+            searchUserButton.Click += searchUserButton_Click;
             // 
             // RegisterUserButton
             // 

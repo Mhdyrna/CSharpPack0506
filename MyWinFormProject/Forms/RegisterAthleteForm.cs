@@ -33,7 +33,7 @@ namespace MyWinFormProject.Forms
                 MessageBox.Show("11 کاراکتر وارد کنید");
                 return;
             }
-            Athlete athlete = new Athlete(name, lastName, nationalCode, mobile);
+            Athlete athlete = new Athlete(name, lastName, mobile, nationalCode);
             athletes.Add(athlete);
             athleteDataGridView.DataSource = athletes;
 
@@ -59,7 +59,68 @@ namespace MyWinFormProject.Forms
                 MessageBox.Show("فایل یافت نشد");
             }
             List<Athlete> athletes = JsonConvert.DeserializeObject<List<Athlete>>(json);
-            athleteDataGridView.DataSource= athletes;
+            athleteDataGridView.DataSource = athletes;
+        }
+
+
+        private void TextBox_Enter(object sender, EventArgs e)
+        {
+            ((TextBox)sender).BackColor = Color.LemonChiffon;
+        }
+
+        private void TextBox_Leave(object sender, EventArgs e)
+        {
+            ((TextBox)sender).BackColor = Color.White;
+        }
+        private void Button_MouseEnter(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.Navy;
+        }
+
+        private void Button_MouseLeave(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.RoyalBlue;
+        }
+
+        private void RegisterAthleteForm_Load(object sender, EventArgs e)
+        {
+            foreach (Control control in this.Controls)
+            {
+                if (control is TextBox textBox)
+                {
+                    textBox.Enter += TextBox_Enter;
+                    textBox.Leave += TextBox_Leave;
+                }
+                if (control is Button button)
+                {
+                    button.BackColor = Color.RoyalBlue;
+                    button.ForeColor = Color.White;
+                    button.FlatStyle = FlatStyle.Flat;
+
+                    button.MouseEnter += Button_MouseEnter;
+                    button.MouseLeave += Button_MouseLeave;
+                }
+            }
+        }
+
+        private void searchAthleteButton_MouseEnter(object sender, EventArgs e)
+        {
+            searchAthleteButton.BackColor = Color.BlueViolet;
+        }
+
+        private void searchAthleteButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void registerAthleteButton_MouseEnter(object sender, EventArgs e)
+        {
+            registerAthleteButton.BackColor = Color.GreenYellow;
+        }
+
+        private void registerAthleteDataMockButton_MouseEnter(object sender, EventArgs e)
+        {
+            registerAthleteDataMockButton.BackColor = Color.Yellow;
         }
     }
 }
